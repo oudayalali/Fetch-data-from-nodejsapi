@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login">
+        <form action="https://nodejsapi-excel.herokuapp.com/addexcel" method="POST">
+            <label for="fname">First name:</label>
+            <input type="text" id="first_name" name="first_name"><br><br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="last_name" name="last_name"><br><br>
+            <input type="submit" value="Submit">
+           </form>
+    </div>
+
+      <!-- Here a loader is created which 
+             loads till response comes -->
+             <div class="d-flex justify-content-center">
+                <div class="spinner-border" 
+                     role="status" id="loading">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+            <h1>First and last names database, when you enter your first and last name in their empty fields, the database below will populate them</h1>
+            <!-- table for showing data -->
+            <table id="employees"></table>
+</body>
+
+<script src="index.js"></script>
+<script src="server.js"></script>
+</html>
